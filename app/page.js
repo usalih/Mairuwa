@@ -4,7 +4,7 @@ import Image from "next/image";
 const Home = () => {
   return (
     <>
-      <section className="rounded-b-xl text-primary-white bg-gradient-to-r	from-primary-blue to-primary-blueO ">
+      <section className="relative rounded-b-xl text-primary-white bg-gradient-to-r	from-primary-blue to-primary-blueO ">
         <div className="absolute -z-10 w-full">
           <picture>
             <source media="(min-width: 768px)" srcSet="MaiRuwa.png" />
@@ -22,7 +22,7 @@ const Home = () => {
             Order Now!!!
           </button>
         </div>
-        <div className="absolute z-30">
+        <div className="absolute z-30 w-full">
           <OrderForm />
         </div>
       </section>
