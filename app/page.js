@@ -1,3 +1,4 @@
+import OrderForm from "@/components/OrderForm";
 import Image from "next/image";
 
 const Home = () => {
@@ -20,6 +21,9 @@ const Home = () => {
           <button className="bg-primary-white text-primary-blue py-3 px-4 rounded-xl text-xl font-semibold">
             Order Now!!!
           </button>
+        </div>
+        <div className="absolute z-30">
+          <OrderForm />
         </div>
       </section>
       <section className="pt-44 pb-28 px-10 text-lg lg:flex lg:px-24 w-full">
@@ -44,12 +48,12 @@ const Home = () => {
           <p>Still thinking? Check out what others are saying about us.</p>
         </div>
       </section>
-      <section className="flex flex-col items-center pb-28 px-10 lg:px-28">
+      <section className="flex flex-col items-center gap-4 pb-20 px-10 lg:px-28">
         <div className="flex justify-center items-center w-3/4 mb-6">
           <div className="bg-primary-blue w-full h-0.5"></div>
           <div className="bg-primary-blue w-2 h-2 rounded-full"></div>
         </div>
-        <div className="lg:flex lg:mb-24 gap-4 ">
+        <div className="mb-14 lg:flex lg:mb-24 gap-4  ">
           <div className="flex flex-col items-center mt-6">
             <div className="flex">
               <div>
@@ -137,13 +141,13 @@ const Home = () => {
           <div className="bg-primary-blue w-full h-0.5"></div>
         </div>
       </section>
-      <section>
+      <section className="mb-24">
         <div className="text-primary-blue font-extrabold text-xl text-center mb-10">
           Send us a messgae
         </div>
-        <div className="mx-8">
-          <form className="flex flex-col items-center w-full rounded-xl border-2 p-3">
-            <div className="border-2 rounded-xl w-full mb-2">
+        <div className="mx-8 lg:mx-auto lg:w-2/3">
+          <form className="flex flex-col items-center w-full rounded-xl border-2 p-3 border-primary-blue">
+            <div className="border-2 border-primary-blue rounded-xl w-full mb-2">
               <input
                 className="p-3 rounded-xl"
                 type="text"
@@ -152,7 +156,7 @@ const Home = () => {
                 value=""
               />
             </div>
-            <div className="border-2 rounded-xl w-full">
+            <div className="border-2 border-primary-blue rounded-xl w-full mb-2">
               <input
                 className="p-3 rounded-xl"
                 type="email"
@@ -161,21 +165,18 @@ const Home = () => {
                 value=""
               />
             </div>
-            <div>
+            <div className="border-2 border-primary-blue rounded-xl w-full mb-3">
               <textarea
                 id="message"
-                className="p-3"
+                className="p-3 rounded-xl w-full"
                 placeholder="Your message here, please"
-                name="message"
-                rows="4"
-                cols="50"
               ></textarea>
-              <input
+              {/* <input
                 type="message"
                 name="name"
                 placeholder="Your message here, please"
                 value=""
-              />
+              /> */}
             </div>
             <button
               type="submit"
