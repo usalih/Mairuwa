@@ -4,7 +4,7 @@ const OrderForm = () => {
   return (
     <>
       <div className="bg-primary-white border-2 border-primary-blue w-4/5 mx-auto p-4 rounded-xl">
-        <form>
+        <form className="lg:flex">
           <div>
             <input type="text" placeholder="Location" />
           </div>
