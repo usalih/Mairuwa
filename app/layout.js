@@ -1,6 +1,5 @@
 import "./globals.css";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
+
 import { Lato } from "next/font/google";
 
 const lato = Lato({
@@ -17,9 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={lato.className}>
-        <Nav />
         <main>{children}</main>
-        <Footer />
       </body>
     </html>
   );

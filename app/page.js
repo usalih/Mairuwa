@@ -1,17 +1,21 @@
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
 import OrderForm from "@/components/OrderForm";
+
 import Image from "next/image";
 
 const Home = () => {
   return (
     <>
-      <section className="relative rounded-b-xl text-primary-white bg-gradient-to-r	from-primary-blue to-primary-blueO ">
+      <Nav />
+      <section className="relative h-full rounded-b-xl text-primary-white bg-gradient-to-r	from-primary-blue to-primary-blueO ">
         <div className="absolute -z-10 w-full">
           <picture>
             <source media="(min-width: 768px)" srcSet="MaiRuwa.png" />
             <img src="MaiRuwa-mobile.png" alt="" className="w-full h-full " />
           </picture>
         </div>
-        <div className="lg:w-2/3  py-28 pb-44 px-8 lg:py-56 lg:px-14">
+        <div className=" lg:w-2/3 py-28 pb-44 px-8 lg:py-56 lg:px-14">
           <h1 className="font-extrabold text-5xl lg:text-6xl mb-2">
             Want To Get A Mairuwa Without Stress?
           </h1>
@@ -22,11 +26,14 @@ const Home = () => {
             Order Now!!!
           </button>
         </div>
-        <div className="absolute z-30 w-full">
+        <div className="absolute  w-full -bottom-40 lg:-bottom-10">
           <OrderForm />
         </div>
       </section>
-      <section className="pt-44 pb-28 px-10 text-lg lg:flex lg:px-24 w-full">
+      <section
+        id="about-us"
+        className="pt-44 pb-28 px-10 text-lg lg:flex lg:px-24 w-full"
+      >
         <div className="flex justify-center items-center lg:w-2/4">
           <Image src="Busnesswoman head.svg" height={300} width={320} />
         </div>
@@ -48,7 +55,7 @@ const Home = () => {
           <p>Still thinking? Check out what others are saying about us.</p>
         </div>
       </section>
-      <section className="flex flex-col items-center gap-4 pb-20 px-10 lg:px-28">
+      <section className="flex flex-col items-center gap-4 pb-20 px-10 lg:px-28 mb-24">
         <div className="flex justify-center items-center w-3/4 mb-6">
           <div className="bg-primary-blue w-full h-0.5"></div>
           <div className="bg-primary-blue w-2 h-2 rounded-full"></div>
@@ -141,7 +148,7 @@ const Home = () => {
           <div className="bg-primary-blue w-full h-0.5"></div>
         </div>
       </section>
-      <section className="mb-24">
+      <section id="contact-us" className="mb-24 ">
         <div className="text-primary-blue font-extrabold text-xl text-center mb-10">
           Send us a messgae
         </div>
@@ -187,6 +194,7 @@ const Home = () => {
           </form>
         </div>
       </section>
+      <Footer />
     </>
   );
 };
